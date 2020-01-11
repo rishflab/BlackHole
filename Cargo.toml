@@ -1,6 +1,18 @@
-[workspace]
+[package]
+name = "blackhole"
+authors = ["rishflab <rishflab@hotmail.com>"]
+repository = "https://github.com/rishflab/blackhole"
+version = "0.1.0"
+publish = false
+edition = "2018"
+keywords = ["game", "space", "spaceship", "construction"]
+categories = ["games"]
+description = "Space ship battle royale"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-members = [
-    "engine",
-    "game",
-]
+[dependencies]
+not-mechanical-engine = {  git = "https://github.com/rishflab/not-mechanical-engine", rev = "4672070ed46b96a1ca5350c73632232392823c2e" }
+nalgebra-glm = "0.3"
+specs = "0.15"
+winit = "0.20.0-alpha4"
+env_logger = "0.6"
